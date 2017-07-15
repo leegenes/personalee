@@ -1,0 +1,22 @@
+.nav-bar {
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  background-color: #666;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  height: 100%;
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  font-family: sans-serif;
+}
+
+.nav-item:hover {
+  background-color: #123456;
+  color: #666;
+}
