@@ -5,7 +5,8 @@
 
 body {
   height: 100vh;
-  width: 100vw;
+  min-height: 425px;
+  width: 100%;
 }
 
 #root {
@@ -45,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .info-bar-item {
@@ -81,7 +82,7 @@ body {
 }
 
 .view-filter-bar {
-  flex: 0 1 10%;
+  flex: 0 1 auto;
 
   display: flex;
   justify-content: space-around;
@@ -92,6 +93,7 @@ body {
 .filter-option {
   flex: 0 1 50%;
   height: 100%;
+  padding: 20px 0px;
 
   display: flex;
   align-items: center;
@@ -109,6 +111,45 @@ body {
   overflow-y: auto;
   scroll-behavior: smooth;
   max-height: auto;
+  margin: 20px;
 
   display: flex;
+}
+
+.tiles {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-container {
+  flex: 0 1 45%;
+  padding-bottom: 25px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list {
+  justify-content: flex-start;
+  padding: 0px 15px;
+}
+
+.blog-post {
+  flex: 0 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-post:hover {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+.blog-header {
+  flex: 0 1 auto;
+  width: 100%;
+  font-size: 1.5em;
 }

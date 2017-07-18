@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import fire from '../../../fire';
-import './blog.css';
 
 class Blog extends Component {
   constructor(props) {
@@ -17,8 +16,83 @@ class Blog extends Component {
 
   render() {
     return (
-      <div className="content-container">
-        BLOG WORDS
+      <div className="content-container vertical list">
+        <div className="blog-post">
+          <p className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </p>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+        <div className="blog-post">
+          <div className="blog-header">
+            This is a blog post: Something that you will find worth reading
+          </div>
+        </div>
+
       </div>
     )
   }
