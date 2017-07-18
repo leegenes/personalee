@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Blog from './Blog';
 import Projects from './Projects';
-import './view.css';
 
 const ViewToDisplay = (props) => {
   if (props.selectedView === "blog") {
@@ -20,20 +19,18 @@ class View extends Component {
   render() {
     console.log(this.state.selectedView);
     return (
-      <div className="home-container">
-        <div className="home-header">
-          <div className="home-header-opt"
+      <div className="view-container vertical">
+        <div className="view-filter-bar text-header horizontal">
+          <div className="filter-option"
             onClick={() => this.handleClick("projects")}>
             Projects
           </div>
-          <div className="home-header-opt"
+          <div className="filter-option"
             onClick={() => this.handleClick("blog")}>
             Blog
           </div>
         </div>
-        <div className="content-container">
           <ViewToDisplay selectedView={this.state.selectedView} />
-        </div>
       </div>
     )
   }
