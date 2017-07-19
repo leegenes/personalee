@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Navigation extends Component {
+class LeftBar extends Component {
   render() {
     return (
       <div className="info-bar">
         <div className="info-bar-item vertical" id="about-me">
-          <img src="https://www.fillmurray.com/g/200/200"></img>
+          <img className="info-bar-subitem image" src="me.jpg"></img>
           <div className="info-bar-subitem vertical center">
             <div className="info-bar-text text-header"
               id="my-name">
@@ -27,4 +27,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+export default LeftBar;

@@ -1,13 +1,36 @@
 import React, { Component } from 'react';
-import Navigation from './components/Navigation';
+import LeftBar from './components/LeftBar';
 import View from './components/View';
+import fire from './fire';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentWillMount() {
+    var self = this;
+    self.getSiteData().then((result) => self.setState(
+      {
+        blogPosts: result.blogPosts,
+        projects: result.projects
+      })
+    )}
+
+  getSiteData() {
+  var db = fire.database();
+  var ref = db.ref('/').once('value');
+  return ref.then(snapshot => { return snapshot.val() });
+  }
+
   render() {
     return (
       <div className="AppContainer">
-        <Navigation />
-        <View />
+        <LeftBar />
+        <View
+          blog={this.state.blogPosts}
+          projects={this.state.projects} />
       </div>
     )
   }

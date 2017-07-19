@@ -4,20 +4,22 @@ import Projects from './Projects';
 
 const ViewToDisplay = (props) => {
   if (props.selectedView === "blog") {
-    return <Blog />
+    return <Blog posts={props.blog.postInfo} />
   }
-  return <Projects />
+  if (props.selectedView === "projects") {
+    return <Projects projects={props.projects} />
+  }
+  return <div></div>
 }
 
 class View extends Component {
   constructor(props) {
     super(props);
-    this.state = {selectedView: "projects"};
+    this.state = {selectedView: null};
     this.handleClick = this.handleClick.bind(this);
   };
 
   render() {
-    console.log(this.state.selectedView);
     return (
       <div className="view-container vertical">
         <div className="view-filter-bar text-header horizontal">
@@ -30,12 +32,15 @@ class View extends Component {
             Blog
           </div>
         </div>
-          <ViewToDisplay selectedView={this.state.selectedView} />
+          <ViewToDisplay
+            selectedView={this.state.selectedView}
+            blog={ this.props.blog }
+            projects={ this.props.projects} />
       </div>
     )
   }
   handleClick(clickedView) {
-    this.setState({selectedView: clickedView})
- }
+    this.setState({selectedView: clickedView});
+  }
 }
 export default View;
