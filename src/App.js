@@ -6,7 +6,8 @@ import fire from './fire';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {blogPosts: [],
+                  projects: []};
   }
 
   componentWillMount() {
@@ -29,7 +30,7 @@ class App extends Component {
       <div className="AppContainer">
         <LeftBar />
         <View
-          blog={this.state.blogPosts}
+          blogPosts={this.state.blogPosts}
           projects={this.state.projects} />
       </div>
     )

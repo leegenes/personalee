@@ -1,5 +1,4 @@
 * {
-  font-family: 'Open Sans', sans-serif;
   margin: 0px;
 }
 
@@ -9,11 +8,17 @@ body {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #root {
   height: 100%;
 }
 
 .AppContainer {
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -137,6 +142,16 @@ body {
   font-size: 2em;
 }
 
+.project-container img {
+  max-width: 400px;
+}
+
+.project-desc {
+  padding: 0px 10px;
+}
+
+
+
 .list {
   justify-content: flex-start;
   padding: 0px 10px;
@@ -150,8 +165,22 @@ body {
 .blog-header {
   height: 125px;
   width: 100%;
-  font-size: 2em;
   padding: 0px 10px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.blog-post-title {
+  align-self: center;
+  font-size: 1em;
+  padding: 15px 0px;
+}
+
+.blog-post-date {
+  align-self: flex-end;
+  font-style: italic;
+  padding: 5px 10px;
 }
 
 .blog-header:hover {
@@ -160,6 +189,16 @@ body {
   font-weight: bold;
 }
 
-.blog-header p {
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: .5em;
+    max-width: 768px;
+  }
+  .AppContainer {
+    flex-direction: column-reverse;
+  }
 
+  .info-bar {
+    display:none;
+  }
 }

@@ -18,10 +18,16 @@ class LeftBar extends Component {
           </div>
         </div>
         <div className="info-bar-item horizontal" id="fa-links">
-          <i className="fa fa-envelope-square info-bar-subitem" aria-hidden="true"></i>
-          <i className="fa fa-github-square info-bar-subitem" aria-hidden="true"></i>
-          <i className="fa fa-linkedin-square info-bar-subitem" aria-hidden="true"></i>
-        </div>
+          <a href="mailto:haugenlee@gmail.com">
+            <i className="fa fa-envelope-square info-bar-subitem" aria-hidden="true"></i>
+          </a>
+          <a href="github.com/leegenes">
+            <i className="fa fa-github-square info-bar-subitem" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/haugenlee/">
+            <i className="fa fa-linkedin-square info-bar-subitem" aria-hidden="true"></i>
+          </a>
+      </div>
       </div>
     );
   }

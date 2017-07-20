@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 
+
 const Project = (props) => {
   return (
     <div className="project-container vertical center">
-      <div className="project-title">{ props.project.title}</div>
+      <div className="project-title text-header">{ props.project.title}</div>
       <img className="project-image" src={ props.project.photoURL }></img>
       <p className="project-desc">{ props.project.description }</p>
     </div>

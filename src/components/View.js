@@ -4,7 +4,7 @@ import Projects from './Projects';
 
 const ViewToDisplay = (props) => {
   if (props.selectedView === "blog") {
-    return <Blog posts={props.blog.postInfo} />
+    return <Blog blogPosts={props.blogPosts} />
   }
   if (props.selectedView === "projects") {
     return <Projects projects={props.projects} />
@@ -15,7 +15,7 @@ const ViewToDisplay = (props) => {
 class View extends Component {
   constructor(props) {
     super(props);
-    this.state = {selectedView: null};
+    this.state = {selectedView: "projects"};
     this.handleClick = this.handleClick.bind(this);
   };
 
@@ -34,7 +34,7 @@ class View extends Component {
         </div>
           <ViewToDisplay
             selectedView={this.state.selectedView}
-            blog={ this.props.blog }
+            blogPosts={ this.props.blogPosts }
             projects={ this.props.projects} />
       </div>
     )
