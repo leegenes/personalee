@@ -83,8 +83,7 @@ text {
 }
 
 #filter-options {
-  flex: 0 1 auto;
-  height: 125px;
+  flex: 0 1 15%;
   width: 100%;
   justify-content: space-around;
   align-items: center;
@@ -110,6 +109,7 @@ text {
   scroll-behavior: smooth;
   width: 90%;
   position: static;
+  padding-top: 5%;
 }
 
 .main-content * {
@@ -187,4 +187,20 @@ text {
     padding: 0px 10px;
   }
 
+}
+
+@media only screen and (max-width: 415px) {
+  #filter-options {
+    height: 15%;
+  }
+
+  .main-content {
+    bottom: 50px;
+    padding-top: 1%;
+    font-size: .7em;
+  }
+
+  #about-me {
+    font-size: .7em;
+  }
 }
