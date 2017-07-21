@@ -105,7 +105,8 @@ text {
 }
 
 .main-content {
-  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   width: 90%;
   position: static;
