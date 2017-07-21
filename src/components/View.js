@@ -21,16 +21,18 @@ class View extends Component {
 
   render() {
     return (
-      <div className="view-container vertical">
-        <div className="view-filter-bar text-header horizontal">
-          <div className="filter-option"
+      <div className="main-view view container vertical">
+        <div className="container horizontal" id="filter-options">
+          <text className="filter-option container header"
+            id="filter-projects"
             onClick={() => this.handleClick("projects")}>
             Projects
-          </div>
-          <div className="filter-option"
+          </text>
+          <text className="filter-option container header"
+            id="filter-blog"
             onClick={() => this.handleClick("blog")}>
             Blog
-          </div>
+          </text>
         </div>
           <ViewToDisplay
             selectedView={this.state.selectedView}

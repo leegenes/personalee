@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 
 const Project = (props) => {
   return (
-    <div className="project-container vertical center">
-      <div className="project-title text-header">{ props.project.title}</div>
-      <img className="project-image" src={ props.project.photoURL }></img>
-      <p className="project-desc">{ props.project.description }</p>
+    <div className="project container vertical">
+      <div className="project-info title header">{ props.project.title}</div>
+      <img className="project-info image" src={ props.project.photoURL }></img>
+      <text className="project-info desc">{ props.project.description }</text>
     </div>
   )
 }
@@ -20,7 +20,7 @@ const ProjectList = (props) => {
   })
 
   return (
-    <div className="content-container tiles">
+    <div className="projects main-content container vertical">
       { projectItems }
     </div>
   )

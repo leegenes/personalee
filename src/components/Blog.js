@@ -4,13 +4,13 @@ import * as RemarkableRenderer from 'remarkable-react';
 
 const PostHeader = (props) => {
   return (
-    <div className="blog-header vertical text-header">
-      <div className="blog-post-title">
+    <div className="blog-header container vertical">
+      <text className="blog-post-info header">
         {props.title}
-      </div>
-      <div className="blog-post-date">
+      </text>
+      <text className="blog-post-info header">
         {props.date}
-      </div>
+      </text>
     </div>
   )
 }
@@ -19,15 +19,15 @@ const PostContent = (props) => {
   var converter = new Remarkable();
   converter.renderer = new RemarkableRenderer();
   return (
-    <div>
-    { converter.render(props.content) }
-    </div>
+    <text className="blog-post-content markdown">
+      { converter.render(props.content) }
+    </text>
   )
 }
 
 const Post = (props) => {
   return (
-    <div className="blog-post">
+    <div className="blog-post container vertical">
       <PostHeader
         title={props.post.title}
         date={props.post.dateCreated} />
@@ -45,7 +45,7 @@ const PostList = (props) => {
   })
 
   return (
-    <div className="content-container vertical list">
+    <div className="blog main-content container vertical">
       { postItems }
     </div>
   )

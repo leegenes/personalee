@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="AppContainer">
+      <div className="App container">
         <LeftBar />
         <View
           blogPosts={this.state.blogPosts}

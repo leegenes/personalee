@@ -1,11 +1,7 @@
-* {
-  margin: 0px;
-}
-
+/*Across everything*/
 body {
-  height: 100vh;
-  min-height: 425px;
-  width: 100%;
+  font-size: 1.2em;
+  margin: 0px;
 }
 
 a {
@@ -13,192 +9,182 @@ a {
   color: inherit;
 }
 
-#root {
-  height: 100%;
-}
-
-.AppContainer {
+text {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
-.text-header {
+.header {
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
+}
+
+.container {
+  display: flex;
 }
 
 .vertical {
   flex-direction: column;
 }
 
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
 .horizontal {
-  flex-direction: row
+  flex-direction: row;
 }
 
+.App {
+  position: relative;
+}
+
+/*LeftBar*/
 .info-bar {
-  flex: 0 1 auto;
-  min-width: 300px;
-
-  border-right: 2px solid black;
-
-  display: flex;
-  flex-direction: column;
+  width: 30%;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: flex-end;
+  padding-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+#info-bar-sub-cont {
 }
 
 .info-bar-item {
   flex: 0 1 auto;
-  font-size: 24px;
-  padding-bottom: 25px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;;
 }
 
-.info-bar-subitem {
-  flex: 0 1 auto;
-  padding: 5px;
+#fa-links {
+  width: 50%;
+  justify-content: space-around;
+}
 
-  display: flex;
+.bio-link {
+  font-size: 2em;
 }
 
 .info-bar img {
-  max-width: 250px;
-}
-
-.info-bar i {
-  font-size: 1.5em;
-}
-
-.info-bar img {
+  min-width: 90%;
+  max-width: 90%;
   border-radius: 50%;
 }
 
-.view-container {
-  flex: 0 1 75%;
-  min-width: 650px;
 
-  display: flex;
+/*View*/
+.view * {
 }
 
-.view-filter-bar {
-  flex: 0 1 auto;
+.view {
+  flex: 0 1 70%;
+  width: 70%;
+  height: 100%;
+  min-width: 650px;
+  align-items: center;
+  position: fixed;
+  right: 0;
+}
 
-  display: flex;
+#filter-options {
+  flex: 0 1 auto;
+  height: 125px;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
-  font-size: 48px;
+  background: white;
 }
 
 .filter-option {
   flex: 0 1 50%;
   height: 100%;
-  padding: 20px 0px;
-
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .filter-option:hover {
   background: black;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.content-container {
-  flex: 0 1 100%;
-  height: 100%;
+.main-content {
   overflow-y: auto;
   scroll-behavior: smooth;
-  max-height: auto;
-  margin: 20px;
-
-  display: flex;
+  width: 90%;
+  position: static;
 }
 
-.tiles {
-  flex-wrap: wrap;
-  justify-content: space-around;
+.main-content * {
+  max-width: 100%;
 }
 
-.project-container {
-  flex: 0 1 45%;
-  padding-bottom: 25px;
-
-  display: flex;
-  justify-content: flex-start;
+.projects {
+  flex: 0 1 calc(100% - 125px);
+  align-items: center;
 }
 
-.project-title {
-  font-size: 2em;
+.project {
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 7.5%;
 }
 
-.project-container img {
-  max-width: 400px;
+.project img{
+  max-width: 80%;
 }
 
-.project-desc {
-  padding: 0px 10px;
-}
-
-
-
-.list {
-  justify-content: flex-start;
-  padding: 0px 10px;
-}
-
-.blog-post {
-  flex: 0 1 20%;
-  width: 100%;
-}
-
-.blog-header {
-  height: 125px;
-  width: 100%;
-  padding: 0px 10px;
-
-  display: flex;
-  justify-content: flex-end;
-}
-
-.blog-post-title {
-  align-self: center;
-  font-size: 1em;
-  padding: 15px 0px;
-}
-
-.blog-post-date {
-  align-self: flex-end;
-  font-style: italic;
-  padding: 5px 10px;
-}
-
-.blog-header:hover {
-  background: black;
-  color: white;
-  font-weight: bold;
-}
-
-@media only screen and (max-width: 768px) {
-  * {
-    font-size: .5em;
-    max-width: 768px;
-  }
-  .AppContainer {
-    flex-direction: column-reverse;
+@media only screen and (max-width: 850px) {
+  .App {
+    flex-direction: column;
   }
 
-  .info-bar {
-    display:none;
+  .view {
+    dispaly: flex;
+    width: 100%;
+    min-width: 320px;
+    position: relative;
+    justify-content: space-between;
+    order: 1;
   }
+
+  #filter-options {
+    position: fixed;
+    top: 0;
+  }
+
+  #info-bar {
+    flex: 0 1 12.5%;
+    width: 100%;
+
+    background: white;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    display: flex;
+  }
+
+  .main-content {
+    top: 15%;
+    bottom: 12.5%;
+    position: fixed;
+  }
+
+  #info-bar-sub-cont {
+    flex: 0 1 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #info-bar-sub-cont img {
+    display: none;
+  }
+
+  #fa-links {
+    justify-content: center;
+  }
+
+  .bio-link {
+    padding: 0px 10px;
+  }
+
 }
