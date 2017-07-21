@@ -126,10 +126,15 @@ text {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 7.5%;
+  width: 90%;
 }
 
 .project img{
-  max-width: 80%;
+  max-width: 90%;
+}
+
+.blog_post {
+  width: 90%;
 }
 
 @media only screen and (max-width: 850px) {
@@ -192,6 +197,7 @@ text {
 @media only screen and (max-width: 415px) {
   #filter-options {
     height: 15%;
+    background: #BFBFBF;
   }
 
   .main-content {
@@ -200,7 +206,8 @@ text {
     font-size: .7em;
   }
 
-  #about-me {
+  #info-bar-sub-cont {
     font-size: .7em;
+    background: #BFBFBF;
   }
 }
