@@ -6,8 +6,13 @@ const Project = (props) => {
   return (
     <div className="project container vertical">
       <div className="project-info title header">{ props.project.title}</div>
-      <img className="project-info image" src={ props.project.photoURL }></img>
+      <a className="image-link" href={props.externalURL}>
+        <img className="project-info image" src={ props.project.photoURL }></img>
+      </a>
       <text className="project-info desc">{ props.project.description }</text>
+      <div className="project-info tools">
+
+      </div>
     </div>
   )
 }

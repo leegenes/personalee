@@ -23,21 +23,25 @@ class View extends Component {
     return (
       <div className="main-view view container vertical">
         <div className="container horizontal" id="filter-options">
-          <text className="filter-option container header"
+          <div className="filter-option header"
             id="filter-projects"
             onClick={() => this.handleClick("projects")}>
             Projects
-          </text>
+          </div>
           <text className="filter-option container header"
             id="filter-blog"
             onClick={() => this.handleClick("blog")}>
             Blog
           </text>
+          <a href="./HaugenLeeResume.pdf" className="filter-option container header"
+            id="filter-blog">
+            Resumé
+          </a>
         </div>
-          <ViewToDisplay
-            selectedView={this.state.selectedView}
-            blogPosts={ this.props.blogPosts }
-            projects={ this.props.projects} />
+        <ViewToDisplay
+          selectedView={this.state.selectedView}
+          blogPosts={ this.props.blogPosts }
+          projects={ this.props.projects} />
       </div>
     )
   }
