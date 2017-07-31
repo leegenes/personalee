@@ -9,7 +9,7 @@ const Tool = (props) => {
 }
 
 const ToolList = (props) => {
-  if (!props.tools) {
+  if (!props.hasOwnProperty('tools')) {
     return (
       <div></div>
     )
@@ -27,6 +27,22 @@ const ToolList = (props) => {
   )
 }
 
+const GitLink = (props) => {
+  if (!props.project.hasOwnProperty('gitURL')) {
+    return (
+      <div></div>
+    )
+  }
+
+  return (
+    <text className="git-link bordered">
+      <a href={ props.project.gitURL }>
+        <i className="fa fa-github" aria-hidden="true"></i> See it on Github
+      </a>
+    </text>
+  )
+}
+
 
 const Project = (props) => {
   return (
@@ -38,11 +54,7 @@ const Project = (props) => {
       <div className="project-info container vertical">
         <text className="project-desc">{ props.project.description }</text>
         <div className="project-meta container">
-          <text className="git-link bordered">
-            <a href={ props.project.gitURL }>
-              <i className="fa fa-github" aria-hidden="true"></i> See it on Github
-            </a>
-          </text>
+          <GitLink project={ props.project }/>
           <ToolList tools={ props.project.tools } />
         </div>
       </div>
@@ -51,7 +63,7 @@ const Project = (props) => {
 }
 
 const ProjectList = (props) => {
-  const projectItems = Object.keys(props.projects).map((key) => {
+  const projectItems = Object.keys(props.projects).sort(function(a,b){return props.projects[a]-props.projects[b]}).map((key) => {
     return (
       <Project project={ props.projects[key] }/>
     )

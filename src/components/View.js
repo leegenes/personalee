@@ -33,7 +33,7 @@ class View extends Component {
             onClick={() => this.handleClick("blog")}>
             Blog
           </text>
-          <a href="./HaugenLeeResume.pdf" className="filter-option container header"
+          <a href="./resume.html" className="filter-option container header"
             id="filter-blog">
             Resumé
           </a>
