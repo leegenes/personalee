@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^4.6.0",
     "firebase-admin": "^5.0.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.6.2",
+    "react-router": "^4.2.0",
     "react-scripts": "1.0.10",
     "react-showdown": "^1.6.0",
     "remarkable": "^1.7.1",

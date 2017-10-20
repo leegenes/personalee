@@ -28,11 +28,6 @@ class View extends Component {
             onClick={() => this.handleClick("projects")}>
             Projects
           </div>
-          <text className="filter-option container header"
-            id="filter-blog"
-            onClick={() => this.handleClick("blog")}>
-            Blog
-          </text>
           <a href="./resume.html" className="filter-option container header"
             id="filter-blog">
             Resumé
